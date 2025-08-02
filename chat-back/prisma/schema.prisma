@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:admin@localhost:5435/chat"
+}
+
+model User {
+  id        String     @id @default(uuid())
+  name      String
+  email     String
+  password  String
+  createdAt DateTime   @default(now()) @map("created_at")
+  updatedAt DateTime   @updatedAt() @map("updated_at")
+  userRooms UserRoom[]
+
+  @@map("users")
+}
+
+model Room {
+  id String @id @default(uuid())
+
+  // Массив ID пользователей для удобства
+  userIds String[] @default([])
+
+  // Связь many-to-many с пользователями (через промежуточную таблицу)
+  userRooms UserRoom[]
+  createdAt DateTime   @default(now()) @map("created_at")
+  updatedAt DateTime   @updatedAt() @map("updated_at")
+}
+
+// Промежуточная таблица для связи many-to-many
+model UserRoom {
+  id String @id @default(uuid())
+
+  // Внешние ключи
+  userId String
+  roomId String
+
+  // Связи с основными таблицами
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt() @map("updated_at")
+
+  // Уникальное ограничение - пользователь может быть в комнате только один раз
+  @@unique([userId, roomId])
+}

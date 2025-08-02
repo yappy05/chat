@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+  db:
+    container_name: postgresChat
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_URI: postgresql://postgres:admin@localhost:5435/chat
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  redis:
+    container_name: redisChat
+    image: redis:7.2
+    restart: always
+    ports:
+      - 6380:6379
+    command: redis-server --requirepass pass123456
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  backend:
