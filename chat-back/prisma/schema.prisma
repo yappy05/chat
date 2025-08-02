@@ -15,44 +15,47 @@ datasource db {
 }
 
 model User {
-  id        String     @id @default(uuid())
-  name      String
-  email     String
-  password  String
-  createdAt DateTime   @default(now()) @map("created_at")
-  updatedAt DateTime   @updatedAt() @map("updated_at")
-  userRooms UserRoom[]
+  id          String                  @id @default(uuid())
+  name        String
+  email       String
+  password    String
+  createdAt   DateTime                @default(now()) @map("created_at")
+  updatedAt   DateTime                @updatedAt() @map("updated_at")
+  directRooms Room[]
 
   @@map("users")
 }
 
-model Room {
+model DirectRoom {
   id String @id @default(uuid())
 
   // Массив ID пользователей для удобства
   userIds String[] @default([])
 
   // Связь many-to-many с пользователями (через промежуточную таблицу)
-  userRooms UserRoom[]
-  createdAt DateTime   @default(now()) @map("created_at")
-  updatedAt DateTime   @updatedAt() @map("updated_at")
+  participants Room[]
+  createdAt    DateTime                @default(now()) @map("created_at")
+  updatedAt    DateTime                @updatedAt() @map("updated_at")
+
+  @@map("direct_rooms")
 }
 
 // Промежуточная таблица для связи many-to-many
-model UserRoom {
+model Room {
   id String @id @default(uuid())
 
   // Внешние ключи
-  userId String
-  roomId String
+  userId       String
+  directRoomId String
 
   // Связи с основными таблицами
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-  room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  directRoom DirectRoom @relation(fields: [directRoomId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt() @map("updated_at")
 
   // Уникальное ограничение - пользователь может быть в комнате только один раз
-  @@unique([userId, roomId])
+  @@unique([userId, directRoomId])
+  @@map("rooms")
 }
