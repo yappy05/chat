@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e0796f9-fc00-40e2-9207-aa3364097122" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../chat-front/src/widgets/direct/api/findDirectRoomById.api.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/auth/auth.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/auth/auth.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.controller.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.controller.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.module.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.service.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room-participant/direct-room-participant.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/direct-room/direct-room.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/direct-room/direct-room.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/user/user.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user/user.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/accepts/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/accepts/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/accepts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/accepts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/accepts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/accepts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/accepts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/accepts/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-db/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-types/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-types/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-types/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/node_modules/mime-types/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime-types/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime-types/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime-types/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/mimeScore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-db/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-types/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-types/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-types/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/node_modules/mime-types/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/lib/encoding.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/lib/encoding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/lib/mediaType.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/lib/mediaType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/negotiator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/negotiator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-db/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-types/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-types/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-types/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/node_modules/mime-types/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/direct-room/direct-room.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/direct-room/direct-room.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/direct-room/direct-room.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/direct-room/direct-room.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/direct-room/direct-room.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/direct-room/direct-room.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-front/src/app/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-front/vite.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="30oy97rc05U93JijYObKVf1NG2D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sergey/Documents/Программирование/webshtorm/chat/chat-back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sergey/Documents/Программирование/webshtorm/chat/chat-back/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/sergey/Documents/Программирование/webshtorm/chat/chat-back/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e0796f9-fc00-40e2-9207-aa3364097122" name="Changes" comment="" />
+      <created>1754308065967</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754308065967</updated>
+      <workItem from="1754308067305" duration="14991000" />
+      <workItem from="1754342570803" duration="17000" />
+      <workItem from="1754342616332" duration="3568000" />
+      <workItem from="1754388730397" duration="22713000" />
+      <workItem from="1754456448788" duration="5000" />
+      <workItem from="1754460187800" duration="7000" />
+      <workItem from="1754482821572" duration="23766000" />
+      <workItem from="1754580316031" duration="6596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

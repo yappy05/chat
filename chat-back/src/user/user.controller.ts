@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Req } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req } from '@nestjs/common';
 import { UserService } from './user.service';
 import { RegisterDto } from '../auth/dto/register.dto';
 import { Request } from 'express';
@@ -15,5 +15,20 @@ export class UserController {
   @Get()
   public getCookie(@Req() req: Request) {
     return req.session.cookie;
+  }
+
+  @Post('search-by-email')
+  public search(@Body('prefix') prefix: string) {
+    return this.userService.searchPrefixByEmail(prefix);
+  }
+
+  @Get('by-session')
+  public findBySession(@Req() req: Request) {
+    return this.userService.findBySession(req);
+  }
+
+  @Get('by-id/:id')
+  public findById(@Param('id') id: string) {
+    return this.userService.findById(id);
   }
 }

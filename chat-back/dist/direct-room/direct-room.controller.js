@@ -16,6 +16,7 @@ exports.DirectRoomController = void 0;
 const common_1 = require("@nestjs/common");
 const direct_room_service_1 = require("./direct-room.service");
 const direct_create_dto_1 = require("./dto/direct-create.dto");
+const create_massage_dto_1 = require("../massage/dto/create-massage.dto");
 let DirectRoomController = class DirectRoomController {
     directRoomService;
     constructor(directRoomService) {
@@ -23,6 +24,15 @@ let DirectRoomController = class DirectRoomController {
     }
     create(dto) {
         return this.directRoomService.create(dto);
+    }
+    findById(id) {
+        return this.directRoomService.findById(id);
+    }
+    getAllMassages(id) {
+        return this.directRoomService.getAllMassages(id);
+    }
+    sendMassage(dto) {
+        return this.directRoomService.sendMassage(dto);
     }
 };
 exports.DirectRoomController = DirectRoomController;
@@ -33,6 +43,27 @@ __decorate([
     __metadata("design:paramtypes", [direct_create_dto_1.DirectCreateDto]),
     __metadata("design:returntype", void 0)
 ], DirectRoomController.prototype, "create", null);
+__decorate([
+    (0, common_1.Get)('by-id/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], DirectRoomController.prototype, "findById", null);
+__decorate([
+    (0, common_1.Get)('get-all-massages/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], DirectRoomController.prototype, "getAllMassages", null);
+__decorate([
+    (0, common_1.Post)('send-massage'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [create_massage_dto_1.CreateMassageDto]),
+    __metadata("design:returntype", void 0)
+], DirectRoomController.prototype, "sendMassage", null);
 exports.DirectRoomController = DirectRoomController = __decorate([
     (0, common_1.Controller)('direct-room'),
     __metadata("design:paramtypes", [direct_room_service_1.DirectRoomService])

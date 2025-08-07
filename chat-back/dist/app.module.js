@@ -13,6 +13,8 @@ const user_module_1 = require("./user/user.module");
 const auth_module_1 = require("./auth/auth.module");
 const direct_room_module_1 = require("./direct-room/direct-room.module");
 const room_module_1 = require("./room/room.module");
+const massage_module_1 = require("./massage/massage.module");
+const chat_module_1 = require("./chat/chat.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,6 +26,8 @@ exports.AppModule = AppModule = __decorate([
             auth_module_1.AuthModule,
             direct_room_module_1.DirectRoomModule,
             room_module_1.RoomModule,
+            massage_module_1.MassageModule,
+            chat_module_1.ChatModule,
         ],
         controllers: [],
         providers: [],

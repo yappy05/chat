@@ -27,6 +27,15 @@ let UserController = class UserController {
     getCookie(req) {
         return req.session.cookie;
     }
+    search(prefix) {
+        return this.userService.searchPrefixByEmail(prefix);
+    }
+    findBySession(req) {
+        return this.userService.findBySession(req);
+    }
+    findById(id) {
+        return this.userService.findById(id);
+    }
 };
 exports.UserController = UserController;
 __decorate([
@@ -43,6 +52,27 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "getCookie", null);
+__decorate([
+    (0, common_1.Post)('search-by-email'),
+    __param(0, (0, common_1.Body)('prefix')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], UserController.prototype, "search", null);
+__decorate([
+    (0, common_1.Get)('by-session'),
+    __param(0, (0, common_1.Req)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], UserController.prototype, "findBySession", null);
+__decorate([
+    (0, common_1.Get)('by-id/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], UserController.prototype, "findById", null);
 exports.UserController = UserController = __decorate([
     (0, common_1.Controller)('users'),
     __metadata("design:paramtypes", [user_service_1.UserService])

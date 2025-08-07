@@ -25,6 +25,19 @@ let AuthService = class AuthService {
         await this.saveSession(req, user);
         return user;
     }
+    async login(req, dto) {
+        const user = await this.userService.findByEmail(dto.email);
+        if (!user)
+            throw new common_1.NotFoundException('Пользователя с такой почтой не найдено');
+        await this.saveSession(req, user);
+        return user;
+    }
+    logout(req) {
+        req.session.destroy((err) => {
+            if (err)
+                throw new Error('не удалось удалить сессию');
+        });
+    }
     async saveSession(req, user) {
         req.session.userId = user.id;
         return new Promise((resolve, reject) => {

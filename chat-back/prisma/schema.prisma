@@ -15,13 +15,14 @@ datasource db {
 }
 
 model User {
-  id          String                  @id @default(uuid())
+  id          String    @id @default(uuid())
   name        String
-  email       String
+  email       String    @unique
   password    String
-  createdAt   DateTime                @default(now()) @map("created_at")
-  updatedAt   DateTime                @updatedAt() @map("updated_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt() @map("updated_at")
   directRooms Room[]
+  Massage     Massage[]
 
   @@map("users")
 }
@@ -34,9 +35,11 @@ model DirectRoom {
 
   // Связь many-to-many с пользователями (через промежуточную таблицу)
   participants Room[]
-  createdAt    DateTime                @default(now()) @map("created_at")
-  updatedAt    DateTime                @updatedAt() @map("updated_at")
+  massages     Massage[]
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt() @map("updated_at")
 
+  @@unique([userIds])
   @@map("direct_rooms")
 }
 
@@ -58,4 +61,20 @@ model Room {
   // Уникальное ограничение - пользователь может быть в комнате только один раз
   @@unique([userId, directRoomId])
   @@map("rooms")
+}
+
+model Massage {
+  id String @id @default(uuid())
+
+  text     String
+  userId   String
+  directId String
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  directRoom DirectRoom @relation(fields: [directId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt() @map("updated_at")
+
+  @@map("massages")
 }

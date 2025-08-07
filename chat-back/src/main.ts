@@ -8,6 +8,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const redis = new IORedis('redis://default:pass123456@localhost:6380');
 
+  app.enableCors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+  });
+
   app.use(
     session({
       secret: '123456',

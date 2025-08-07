@@ -13,4 +13,19 @@ export declare class UserController {
         updatedAt: Date;
     }>;
     getCookie(req: Request): import("express-session").Cookie;
+    search(prefix: string): Promise<{
+        name: string;
+        id: string;
+        email: string;
+    }[]>;
+    findBySession(req: Request): Promise<{
+        name: string;
+        id: string;
+        email: string;
+    }>;
+    findById(id: string): Promise<{
+        name: string;
+        id: string;
+        email: string;
+    }>;
 }

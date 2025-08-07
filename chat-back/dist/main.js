@@ -8,6 +8,10 @@ const connect_redis_1 = require("connect-redis");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const redis = new ioredis_1.default('redis://default:pass123456@localhost:6380');
+    app.enableCors({
+        origin: 'http://localhost:5173',
+        credentials: true,
+    });
     app.use(session({
         secret: '123456',
         name: 'session',

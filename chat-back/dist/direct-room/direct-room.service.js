@@ -13,29 +13,81 @@ exports.DirectRoomService = void 0;
 const common_1 = require("@nestjs/common");
 const prisma_service_1 = require("../prisma/prisma.service");
 const room_service_1 = require("../room/room.service");
+const massage_service_1 = require("../massage/massage.service");
 let DirectRoomService = class DirectRoomService {
     prismaService;
     roomService;
-    constructor(prismaService, roomService) {
+    massageService;
+    constructor(prismaService, roomService, massageService) {
         this.prismaService = prismaService;
         this.roomService = roomService;
+        this.massageService = massageService;
     }
     async create(dto) {
         const [user1, user2] = dto.userIds;
-        const direct = await this.prismaService.directRoom.create({
-            data: {
-                ...dto,
+        const userIdsArray = [user1, user2].sort();
+        try {
+            const direct = await this.prismaService.directRoom.create({
+                data: {
+                    userIds: userIdsArray,
+                },
+            });
+            await this.roomService.create(user1, direct.id);
+            await this.roomService.create(user2, direct.id);
+            return direct;
+        }
+        catch (error) {
+            if (error.code === 'P2002') {
+                const existingRoom = await this.prismaService.directRoom.findFirst({
+                    where: {
+                        userIds: {
+                            equals: userIdsArray,
+                        },
+                    },
+                });
+                return existingRoom;
+            }
+            throw error;
+        }
+    }
+    async findById(id) {
+        const direct = await this.prismaService.directRoom.findUnique({
+            where: {
+                id,
+            },
+            select: {
+                id: true,
+                userIds: true,
             },
         });
-        await this.roomService.create(user1, direct.id);
-        await this.roomService.create(user2, direct.id);
+        if (!direct)
+            throw new common_1.NotFoundException('такого диалога не найдено');
         return direct;
+    }
+    async sendMassage(dto) {
+        return await this.massageService.create(dto);
+    }
+    async getAllMassages(id) {
+        const direct = await this.prismaService.directRoom.findUnique({
+            where: {
+                id,
+            },
+            include: {
+                massages: true,
+            },
+        });
+        if (!direct) {
+            throw new common_1.NotFoundException('не нашли диалог');
+        }
+        const massages = direct.massages;
+        return massages;
     }
 };
 exports.DirectRoomService = DirectRoomService;
 exports.DirectRoomService = DirectRoomService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService,
-        room_service_1.RoomService])
+        room_service_1.RoomService,
+        massage_service_1.MassageService])
 ], DirectRoomService);
 //# sourceMappingURL=direct-room.service.js.map

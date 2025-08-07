@@ -25,6 +25,54 @@ let UserService = class UserService {
         });
         return user;
     }
+    async findByEmail(email) {
+        const user = await this.prismaService.user.findUnique({
+            where: {
+                email,
+            },
+        });
+        return user;
+    }
+    async findById(id) {
+        const user = await this.prismaService.user.findUnique({
+            where: {
+                id,
+            },
+            select: {
+                id: true,
+                name: true,
+                email: true,
+            },
+        });
+        if (!user)
+            throw new common_1.NotFoundException('пользователь не найден');
+        return user;
+    }
+    async findBySession(req) {
+        const userId = req.session.userId;
+        if (!userId) {
+            throw new common_1.NotFoundException('Сессия не содержит userId');
+        }
+        const user = await this.findById(userId);
+        return user;
+    }
+    async searchPrefixByEmail(prefix) {
+        const users = await this.prismaService.user.findMany({
+            where: {
+                email: {
+                    startsWith: prefix,
+                    mode: 'insensitive',
+                },
+            },
+            select: {
+                id: true,
+                name: true,
+                email: true,
+            },
+            take: 10,
+        });
+        return users;
+    }
 };
 exports.UserService = UserService;
 exports.UserService = UserService = __decorate([

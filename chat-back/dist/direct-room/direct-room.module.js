@@ -11,13 +11,14 @@ const common_1 = require("@nestjs/common");
 const direct_room_service_1 = require("./direct-room.service");
 const direct_room_controller_1 = require("./direct-room.controller");
 const room_service_1 = require("../room/room.service");
+const massage_service_1 = require("../massage/massage.service");
 let DirectRoomModule = class DirectRoomModule {
 };
 exports.DirectRoomModule = DirectRoomModule;
 exports.DirectRoomModule = DirectRoomModule = __decorate([
     (0, common_1.Module)({
         controllers: [direct_room_controller_1.DirectRoomController],
-        providers: [direct_room_service_1.DirectRoomService, room_service_1.RoomService],
+        providers: [direct_room_service_1.DirectRoomService, room_service_1.RoomService, massage_service_1.MassageService],
     })
 ], DirectRoomModule);
 //# sourceMappingURL=direct-room.module.js.map
